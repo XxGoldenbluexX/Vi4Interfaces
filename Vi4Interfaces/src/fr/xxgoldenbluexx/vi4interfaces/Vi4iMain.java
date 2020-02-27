@@ -125,6 +125,10 @@ public class Vi4iMain extends JavaPlugin implements Listener,CommandExecutor{
 		Inventory inv = event.getInventory();
 		ItemStack item = event.getCurrentItem();
 		HumanEntity player = event.getWhoClicked();
+		if (item==null) {
+			event.setCancelled(true);
+			return;
+		}
 		if (inv.equals(maingui)) {
 			event.setCancelled(true);
 			switch (item.getType()){
