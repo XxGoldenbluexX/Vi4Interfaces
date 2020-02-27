@@ -84,14 +84,14 @@ public class Vi4iMain extends JavaPlugin implements Listener,CommandExecutor{
 		gardegui=Bukkit.createInventory(null, 45, ChatColor.BLUE+"Runes Garde");
 		gardegui.setItem(0,makeGuiItem(Material.ORANGE_DYE,ChatColor.GOLD+"Runes Principales"));
 		gardegui.setItem(18,makeGuiItem(Material.PURPLE_DYE,ChatColor.DARK_PURPLE+"Runes Secondaires"));
-		gardegui.setItem(35,makeGuiItem(Material.CYAN_DYE,ChatColor.AQUA+"Runes Tertiaires"));
+		gardegui.setItem(36,makeGuiItem(Material.CYAN_DYE,ChatColor.AQUA+"Runes Tertiaires"));
 		gardegui.setItem(2,makeGuiItem(Material.DIAMOND_SWORD,ChatColor.GOLD+"Matraque de Théo",ChatColor.LIGHT_PURPLE+"Permet de tuer en un coup","",ChatColor.LIGHT_PURPLE+""+ChatColor.ITALIC+"Grosse matraque dans tes fesses"));
-		gardegui.setItem(4,makeGuiItem(Material.REDSTONE_TORCH,ChatColor.GOLD+"Balise",ChatColor.LIGHT_PURPLE+"Permet de poser une balise qui révelle les voleurs a proximitée"));
+		gardegui.setItem(4,makeGuiItem(Material.REDSTONE_TORCH,ChatColor.GOLD+"Balise",ChatColor.LIGHT_PURPLE+"Permet de poser une balise",ChatColor.LIGHT_PURPLE+"qui révelle les voleurs a proximitée"));
 		gardegui.setItem(6,makeGuiItem(Material.COMPASS,ChatColor.GOLD+"Sonnar",ChatColor.LIGHT_PURPLE+"Permet d'émettre un son, aigu si un voleur est proche"));
 		gardegui.setItem(20,makeGuiItem(Material.FIREWORK_ROCKET,ChatColor.DARK_PURPLE+"Surcharge",ChatColor.LIGHT_PURPLE+"Permet d'augmenter grandement sa vitesse et sa force pour 1s",ChatColor.LIGHT_PURPLE+"Délais de récupération: "+ChatColor.WHITE+"20s"));
-		gardegui.setItem(22,makeGuiItem(Material.BRICK_WALL,ChatColor.DARK_PURPLE+"Sonnar",ChatColor.LIGHT_PURPLE+"Permet de poser 2 murs sur les blocs violets",ChatColor.LIGHT_PURPLE+"Les gardes et les voleurs crocheteurs peuvent passer a travers"));
-		gardegui.setItem(37,makeGuiItem(Material.FEATHER,ChatColor.AQUA+"Marathonien",ChatColor.LIGHT_PURPLE+"Permet d'avoir une vitesse de déplacement plus élevée"));
-		gardegui.setItem(39,makeGuiItem(Material.FISHING_ROD,ChatColor.AQUA+"Traceur",ChatColor.LIGHT_PURPLE+"Permet d'acrocher un voleur pour garder ca trace ou le tirer vers soi"));
+		gardegui.setItem(22,makeGuiItem(Material.BRICK_WALL,ChatColor.DARK_PURPLE+"Sonnar",ChatColor.LIGHT_PURPLE+"Permet de poser 2 murs sur les blocs violets",ChatColor.LIGHT_PURPLE+"Les gardes et les voleurs crocheteurs",ChatColor.LIGHT_PURPLE+"peuvent passer a travers"));
+		gardegui.setItem(38,makeGuiItem(Material.FEATHER,ChatColor.AQUA+"Marathonien",ChatColor.LIGHT_PURPLE+"Permet d'avoir une vitesse de déplacement plus élevée"));
+		gardegui.setItem(40,makeGuiItem(Material.FISHING_ROD,ChatColor.AQUA+"Traceur",ChatColor.LIGHT_PURPLE+"Permet d'acrocher un voleur pour garder ca trace ou le tirer vers soi"));
 		//VOLEUR
 		voleurgui=Bukkit.createInventory(null, 45, ChatColor.RED+"Runes Voleur");
 	}
