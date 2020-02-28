@@ -97,16 +97,16 @@ public class Vi4iMain extends JavaPlugin implements Listener,CommandExecutor{
 		voleurgui.setItem(0,makeGuiItem(Material.ORANGE_DYE,ChatColor.GOLD+"Runes Principales"));
 		voleurgui.setItem(18,makeGuiItem(Material.PURPLE_DYE,ChatColor.DARK_PURPLE+"Runes Secondaires"));
 		voleurgui.setItem(36,makeGuiItem(Material.CYAN_DYE,ChatColor.AQUA+"Runes Tertiaires"));
-		voleurgui.setItem(2,makeGuiItem(Material.GLASS_PANE,ChatColor.GOLD+"Invisibilité",ChatColor.LIGHT_PURPLE+"S'accroupir afin de devenir invisible","",ChatColor.LIGHT_PURPLE+"Les ennemis à proximité vous révèlent"));
-		voleurgui.setItem(4,makeGuiItem(Material.GRASS,ChatColor.GOLD+"Buisson",ChatColor.LIGHT_PURPLE+"Les buissons vous rendent invisible","",ChatColor.LIGHT_PURPLE+"Les ennemis à proximité vous révèlent"));
+		voleurgui.setItem(2,makeGuiItem(Material.GLASS_PANE,ChatColor.GOLD+"Invisibilité",ChatColor.LIGHT_PURPLE+"S'accroupir vous fait devenir invisible,",ChatColor.RED+"Les ennemis à proximité vous révèlent"));
+		voleurgui.setItem(4,makeGuiItem(Material.GRASS,ChatColor.GOLD+"Buisson",ChatColor.LIGHT_PURPLE+"Les buissons vous rendent invisible,",ChatColor.RED+"Les ennemis à proximité vous révèlent"));
 		voleurgui.setItem(6,makeGuiItem(Material.CLOCK,ChatColor.GOLD+"Scanneur",ChatColor.LIGHT_PURPLE+"Repère tous les ennemis de la carte, se recharge toute les "+ChatColor.WHITE+"25s"));
-		gardegui.setItem(20,makeGuiItem(Material.RABBIT_FOOT,ChatColor.DARK_PURPLE+"Double-saut",ChatColor.LIGHT_PURPLE+"S'accroupir en l'air afin de refaire un saut"));
-		gardegui.setItem(22,makeGuiItem(Material.TRIPWIRE_HOOK,ChatColor.DARK_PURPLE+"Crocheteur",ChatColor.LIGHT_PURPLE+"Permet de passer à travers les murs placés par les gardes"));
-		gardegui.setItem(24,makeGuiItem(Material.COAL,ChatColor.DARK_PURPLE+"Ombre",ChatColor.LIGHT_PURPLE+"Vous placez une ombre sur la carte, vous pouvez alors vous téléporter dessus","",ChatColor.RED+"Si un garde trouve l'ombre, tous les voleurs [ombre] meurent","",ChatColor.DARK_GRAY+""+ChatColor.ITALIC+"Une seule ombre sur la carte en même temps"));
-		gardegui.setItem(26,makeGuiItem(Material.LANTERN,ChatColor.DARK_PURPLE+"Lanterne",ChatColor.LIGHT_PURPLE+"Vous placez une lanterne sur la carte, un allié voleur peut alors la récuperer pour se téléporter à vous","",ChatColor.DARK_GRAY+""+ChatColor.ITALIC+"Une seule lanterne sur la carte en même temps"));
-		gardegui.setItem(38,makeGuiItem(Material.IRON_CHESTPLATE,ChatColor.AQUA+"Résistant",ChatColor.LIGHT_PURPLE+"Vie augmentée de ",ChatColor.WHITE+"4 ",ChatColor.LIGHT_PURPLE+"coeurs"));
-		gardegui.setItem(40,makeGuiItem(Material.FISHING_ROD,ChatColor.AQUA+"Bracconnier",ChatColor.LIGHT_PURPLE+"Permet d'acrocher des gardes comme des voleurs pour un maximum d'utilité"));
-		gardegui.setItem(42,makeGuiItem(Material.REDSTONE,ChatColor.AQUA+"Traçeur",ChatColor.LIGHT_PURPLE+"Les gardes laissent une traînée derrière eux, visible seulement par vous"));	
+		voleurgui.setItem(20,makeGuiItem(Material.RABBIT_FOOT,ChatColor.DARK_PURPLE+"Double-saut",ChatColor.LIGHT_PURPLE+"S'accroupir en l'air vous fait refaire un saut"));
+		voleurgui.setItem(22,makeGuiItem(Material.TRIPWIRE_HOOK,ChatColor.DARK_PURPLE+"Crocheteur",ChatColor.LIGHT_PURPLE+"Permet de passer à travers les murs placés par les gardes"));
+		voleurgui.setItem(24,makeGuiItem(Material.COAL,ChatColor.DARK_PURPLE+"Ombre",ChatColor.LIGHT_PURPLE+"Placez une ombre sur la carte, vous pouvez vous téléporter dessus?",ChatColor.RED+"Si un garde trouve l'ombre, tous les voleurs [ombre] meurent?",ChatColor.DARK_GRAY+""+ChatColor.ITALIC+"Une seule ombre sur la carte en même temps"));
+		voleurgui.setItem(26,makeGuiItem(Material.LANTERN,ChatColor.DARK_PURPLE+"Lanterne",ChatColor.LIGHT_PURPLE+"Placez une lanterne sur la carte, un voleur peut alors la récuperer pour se téléporter à vous?",ChatColor.DARK_GRAY+""+ChatColor.ITALIC+"Une seule lanterne sur la carte en même temps"));
+		voleurgui.setItem(38,makeGuiItem(Material.IRON_CHESTPLATE,ChatColor.AQUA+"Résistant",ChatColor.LIGHT_PURPLE+"Vie augmentée de "+ChatColor.WHITE+"4 "+ChatColor.LIGHT_PURPLE+"coeurs"));
+		voleurgui.setItem(40,makeGuiItem(Material.FISHING_ROD,ChatColor.AQUA+"Bracconnier",ChatColor.LIGHT_PURPLE+"Permet d'acrocher des gardes ou des voleurs"));
+		voleurgui.setItem(42,makeGuiItem(Material.REDSTONE,ChatColor.AQUA+"Traçeur",ChatColor.LIGHT_PURPLE+"Les gardes laissent une traînée derrière eux"));	
 	}
 	private ItemStack makeGuiItem(Material mat, String name, String... lore) {
 		ItemStack item=new ItemStack(mat);
