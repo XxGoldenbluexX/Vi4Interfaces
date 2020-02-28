@@ -3,6 +3,10 @@ version: 1.0
 authors: [XxGoldenbluexX,Hyez]
 main: fr.xxgoldenbluexx.vi4interfaces.Vi4iMain
 api-version: 1.15
+<<<<<<< HEAD
 commands:
   vi4i:
     description: Affiche l'interface vi4
+=======
+commands: oui
+>>>>>>> branch 'master' of https://github.com/XxGoldenbluexX/Vi4Interfaces.git
