@@ -2,7 +2,7 @@ name: Vi4Interfaces
 version: 1.0
 authors: [XxGoldenbluexX,Hyez]
 main: fr.xxgoldenbluexx.vi4interfaces.Vi4iMain
-api-version: 1.15
+api-version: 1.15.2
 commands:
   vi4i:
     description: Affiche l'interface vi4
