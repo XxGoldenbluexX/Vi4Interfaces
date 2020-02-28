@@ -37,7 +37,7 @@ public class Vi4iMain extends JavaPlugin implements Listener,CommandExecutor{
 		VOLEURPRIMAIRE,
 		VOLEURSECONDAIRE,
 		VOLEURTERTIAIRE
-	}
+	}//STP PUSH
 	
 	private void setRuneToPlayer(HumanEntity player,RuneType rune,int num) {
 		Set<Score> pscores=scoreboard.getScores(player.getName());
