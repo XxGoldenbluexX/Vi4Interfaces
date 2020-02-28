@@ -85,15 +85,28 @@ public class Vi4iMain extends JavaPlugin implements Listener,CommandExecutor{
 		gardegui.setItem(0,makeGuiItem(Material.ORANGE_DYE,ChatColor.GOLD+"Runes Principales"));
 		gardegui.setItem(18,makeGuiItem(Material.PURPLE_DYE,ChatColor.DARK_PURPLE+"Runes Secondaires"));
 		gardegui.setItem(36,makeGuiItem(Material.CYAN_DYE,ChatColor.AQUA+"Runes Tertiaires"));
-		gardegui.setItem(2,makeGuiItem(Material.DIAMOND_SWORD,ChatColor.GOLD+"Matraque de Théo",ChatColor.LIGHT_PURPLE+"Permet de tuer en un coup","",ChatColor.GRAY+""+ChatColor.ITALIC+"Grosse matraque dans tes fesses"));
-		gardegui.setItem(4,makeGuiItem(Material.REDSTONE_TORCH,ChatColor.GOLD+"Balise",ChatColor.LIGHT_PURPLE+"Permet de poser une balise",ChatColor.LIGHT_PURPLE+"qui révelle les voleurs a proximitée"));
-		gardegui.setItem(6,makeGuiItem(Material.COMPASS,ChatColor.GOLD+"Sonnar",ChatColor.LIGHT_PURPLE+"Permet d'émettre un son toute les "+ChatColor.WHITE+"5s",ChatColor.LIGHT_PURPLE+"Le son est aigu si un voleur est proche"));
-		gardegui.setItem(20,makeGuiItem(Material.FIREWORK_ROCKET,ChatColor.DARK_PURPLE+"Surcharge",ChatColor.LIGHT_PURPLE+"Permet d'augmenter grandement sa vitesse et sa force pour 1s",ChatColor.LIGHT_PURPLE+"Délais de récupération: "+ChatColor.WHITE+"20s"));
-		gardegui.setItem(22,makeGuiItem(Material.BRICK_WALL,ChatColor.DARK_PURPLE+"Sonnar",ChatColor.LIGHT_PURPLE+"Permet de poser 2 murs sur les blocs violets",ChatColor.LIGHT_PURPLE+"Les gardes et les voleurs crocheteurs",ChatColor.LIGHT_PURPLE+"peuvent passer a travers"));
-		gardegui.setItem(38,makeGuiItem(Material.FEATHER,ChatColor.AQUA+"Marathonien",ChatColor.LIGHT_PURPLE+"Permet d'avoir une vitesse de déplacement plus élevée"));
-		gardegui.setItem(40,makeGuiItem(Material.FISHING_ROD,ChatColor.AQUA+"Traceur",ChatColor.LIGHT_PURPLE+"Permet d'acrocher un voleur",ChatColor.LIGHT_PURPLE+"pour garder ca trace ou le tirer vers soi"));
+		gardegui.setItem(2,makeGuiItem(Material.DIAMOND_SWORD,ChatColor.GOLD+"CRS",ChatColor.LIGHT_PURPLE+"Permet de tuer en un coup","",ChatColor.GRAY+""+ChatColor.ITALIC+"Grosse matraque dans tes fesses"));
+		gardegui.setItem(4,makeGuiItem(Material.REDSTONE_TORCH,ChatColor.GOLD+"Balise",ChatColor.LIGHT_PURPLE+"Permet de poser une balise",ChatColor.LIGHT_PURPLE+"qui révèle les voleurs à proximité"));
+		gardegui.setItem(6,makeGuiItem(Material.COMPASS,ChatColor.GOLD+"Sonnar",ChatColor.LIGHT_PURPLE+"Permet d'émettre un son toute les "+ChatColor.WHITE+"5s,",ChatColor.LIGHT_PURPLE+"Son aigu si un voleur est proche"));
+		gardegui.setItem(20,makeGuiItem(Material.FIREWORK_ROCKET,ChatColor.DARK_PURPLE+"Surcharge",ChatColor.LIGHT_PURPLE+"Permet d'augmenter grandement sa vitesse et sa force pour 1s",ChatColor.LIGHT_PURPLE+"Délai de récupération: "+ChatColor.WHITE+"20s"));
+		gardegui.setItem(22,makeGuiItem(Material.BRICK_WALL,ChatColor.DARK_PURPLE+"Mur",ChatColor.LIGHT_PURPLE+"Permet de poser 2 murs sur les blocs violets de la carte",ChatColor.LIGHT_PURPLE+"Les gardes et les voleurs [Crocheteurs]",ChatColor.LIGHT_PURPLE+"peuvent passer à travers"));
+		gardegui.setItem(38,makeGuiItem(Material.FEATHER,ChatColor.AQUA+"Rapidité",ChatColor.LIGHT_PURPLE+"Vitesse de déplacement plus élevée"));
+		gardegui.setItem(40,makeGuiItem(Material.FISHING_ROD,ChatColor.AQUA+"Pêcheur",ChatColor.LIGHT_PURPLE+"Permet d'acrocher un voleur",ChatColor.LIGHT_PURPLE+"pour garder sa trace ou le tirer vers soi"));
 		//VOLEUR
 		voleurgui=Bukkit.createInventory(null, 45, ChatColor.RED+"Runes Voleur");
+		voleurgui.setItem(0,makeGuiItem(Material.ORANGE_DYE,ChatColor.GOLD+"Runes Principales"));
+		voleurgui.setItem(18,makeGuiItem(Material.PURPLE_DYE,ChatColor.DARK_PURPLE+"Runes Secondaires"));
+		voleurgui.setItem(36,makeGuiItem(Material.CYAN_DYE,ChatColor.AQUA+"Runes Tertiaires"));
+		voleurgui.setItem(2,makeGuiItem(Material.GLASS_PANE,ChatColor.GOLD+"Invisibilité",ChatColor.LIGHT_PURPLE+"S'accroupir afin de devenir invisible","",ChatColor.LIGHT_PURPLE+"Les ennemis à proximité vous révèlent"));
+		voleurgui.setItem(4,makeGuiItem(Material.GRASS,ChatColor.GOLD+"Buisson",ChatColor.LIGHT_PURPLE+"Les buissons vous rendent invisible","",ChatColor.LIGHT_PURPLE+"Les ennemis à proximité vous révèlent"));
+		voleurgui.setItem(6,makeGuiItem(Material.CLOCK,ChatColor.GOLD+"Scanneur",ChatColor.LIGHT_PURPLE+"Repère tous les ennemis de la carte, se recharge toute les "+ChatColor.WHITE+"25s"));
+		gardegui.setItem(20,makeGuiItem(Material.RABBIT_FOOT,ChatColor.DARK_PURPLE+"Double-saut",ChatColor.LIGHT_PURPLE+"S'accroupir en l'air afin de refaire un saut"));
+		gardegui.setItem(22,makeGuiItem(Material.TRIPWIRE_HOOK,ChatColor.DARK_PURPLE+"Crocheteur",ChatColor.LIGHT_PURPLE+"Permet de passer à travers les murs placés par les gardes"));
+		gardegui.setItem(24,makeGuiItem(Material.COAL,ChatColor.DARK_PURPLE+"Ombre",ChatColor.LIGHT_PURPLE+"Vous placez une ombre sur la carte, vous pouvez alors vous téléporter dessus","",ChatColor.RED+"Si un garde trouve l'ombre, tous les voleurs [ombre] meurent","",ChatColor.DARK_GRAY+""+ChatColor.ITALIC+"Une seule ombre sur la carte en même temps"));
+		gardegui.setItem(26,makeGuiItem(Material.LANTERN,ChatColor.DARK_PURPLE+"Lanterne",ChatColor.LIGHT_PURPLE+"Vous placez une lanterne sur la carte, un allié voleur peut alors la récuperer pour se téléporter à vous","",ChatColor.DARK_GRAY+""+ChatColor.ITALIC+"Une seule lanterne sur la carte en même temps"));
+		gardegui.setItem(38,makeGuiItem(Material.IRON_CHESTPLATE,ChatColor.AQUA+"Résistant",ChatColor.LIGHT_PURPLE+"Vie augmentée de ",ChatColor.WHITE+"4 ",ChatColor.LIGHT_PURPLE+"coeurs"));
+		gardegui.setItem(40,makeGuiItem(Material.FISHING_ROD,ChatColor.AQUA+"Bracconnier",ChatColor.LIGHT_PURPLE+"Permet d'acrocher des gardes comme des voleurs pour un maximum d'utilité"));
+		gardegui.setItem(42,makeGuiItem(Material.REDSTONE,ChatColor.AQUA+"Traçeur",ChatColor.LIGHT_PURPLE+"Les gardes laissent une traînée derrière eux, visible seulement par vous"));	
 	}
 	private ItemStack makeGuiItem(Material mat, String name, String... lore) {
 		ItemStack item=new ItemStack(mat);
@@ -196,14 +209,14 @@ public class Vi4iMain extends JavaPlugin implements Listener,CommandExecutor{
 			case LANTERN:
 				setRuneToPlayer(player, RuneType.VOLEURSECONDAIRE, 3);
 				break;
-			case HONEY_BOTTLE:
-				setRuneToPlayer(player, RuneType.VOLEURSECONDAIRE, 4);
-				break;
 			case IRON_CHESTPLATE:
 				setRuneToPlayer(player, RuneType.VOLEURTERTIAIRE, 0);
 				break;
 			case FISHING_ROD:
 				setRuneToPlayer(player, RuneType.VOLEURTERTIAIRE, 1);
+				break;
+			case HONEY_BOTTLE:
+				setRuneToPlayer(player, RuneType.VOLEURTERTIAIRE, 2);
 				break;
 			default:
 				break;
