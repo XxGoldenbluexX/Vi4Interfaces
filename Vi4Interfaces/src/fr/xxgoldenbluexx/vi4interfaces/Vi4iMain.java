@@ -68,7 +68,6 @@ public class Vi4iMain extends JavaPlugin implements Listener,CommandExecutor{
 			}
 		}
 	}
-	
 	private void joinTeam(HumanEntity player, String team) {
 			scoreboard.getTeam(team).addEntry(player.getName());
 	}
