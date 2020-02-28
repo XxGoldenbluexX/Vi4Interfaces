@@ -68,7 +68,10 @@ public class Vi4iMain extends JavaPlugin implements Listener,CommandExecutor{
 			}
 		}
 	}
-	//JUIF
+	
+	private void joinTeam(HumanEntity player, String team) {
+			scoreboard.getTeam(team).addEntry(player.getName());
+	}
 	@Override
 	public void onEnable() {
 		super.onEnable();
@@ -159,6 +162,7 @@ public class Vi4iMain extends JavaPlugin implements Listener,CommandExecutor{
 			return;
 		}else if(inv.equals(gardegui)) {
 			event.setCancelled(true);
+			joinTeam(player, "garde");
 			switch (item.getType()) {
 			case DIAMOND_SWORD:
 				setRuneToPlayer(player, RuneType.GARDEPRIMAIRE, 0);
@@ -187,6 +191,7 @@ public class Vi4iMain extends JavaPlugin implements Listener,CommandExecutor{
 			return;
 		}else if(inv.equals(voleurgui)) {
 			event.setCancelled(true);
+			joinTeam(player, "voleur");
 			switch (item.getType()) {
 			case GLASS_PANE:
 				setRuneToPlayer(player, RuneType.VOLEURPRIMAIRE, 0);
