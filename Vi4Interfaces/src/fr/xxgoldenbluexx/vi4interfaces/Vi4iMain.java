@@ -68,7 +68,7 @@ public class Vi4iMain extends JavaPlugin implements Listener,CommandExecutor{
 			}
 		}
 	}
-	
+	//JUIF
 	@Override
 	public void onEnable() {
 		super.onEnable();
